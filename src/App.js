@@ -1,12 +1,14 @@
-import './App.css';
-import PdfRender from './PdfRender';
-
-
+import { PDFViewer } from '@react-pdf/renderer';
+import Basic from './components/Basic';
+import {studentData} from './studentData';
 function App() {
   return (
     
-    <PdfRender/>
+    <PDFViewer style={{minHeight:"100vh",minWidth:"100vw"}}>
+      <Basic studentData={studentData} />
+    </PDFViewer>
     
+   
   );
 }
 
