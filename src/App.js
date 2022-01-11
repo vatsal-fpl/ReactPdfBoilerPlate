@@ -1,5 +1,5 @@
 import { PDFViewer } from '@react-pdf/renderer';
-import Basic from './components/Basic';
+import Basic from './CVTemplates/Basic/Basic';
 import {studentData} from './studentData';
 function App() {
   return (
