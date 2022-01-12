@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import { PDFViewer } from '@react-pdf/renderer';
+import React from 'react';
+import PDFFile from './components/PDFFile';
+import { PDFDownloadLink } from '@react-pdf/renderer';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <PDFDownloadLink document={<PDFFile />} fileName='exmp'>
+        {({loading}) =>  
+          loading ? (
+            <button>Loading Doc..</button> 
+          ) : ( 
+            <button>Download</button>
+          )
+          }
+      </PDFDownloadLink>
+
     </div>
   );
 }
