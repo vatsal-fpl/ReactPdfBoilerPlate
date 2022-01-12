@@ -1,7 +1,6 @@
 export const studentData = {
   student: {
     // profilePicture: File,
-    selectedFontFamily: "Be Vietnam Pro",
     firstName: "Vivek",
     lastName: "Modi",
     dateOfBirth: new Date("11-04-1997"),
@@ -25,22 +24,19 @@ export const studentData = {
     },
   ],
 
-  /* workExperience : [
-        {
-            companyName: String!
-            location: String!
-            position: String!
-
-            startMonth: String!
-            startYear: String!
-            endMonth: String
-            endYear : String
-
-            currentlyWorking: Bool
-
-            description: String!
-        }
-    ]*/
+  workExperience: [
+    {
+      id: "1",
+      companyName: "FinePrint legal",
+      location: "Ahmedabad",
+      position: "Web developer intern",
+      startMonth: "jan",
+      startYear: "2022",
+      currentlyWorking: true,
+      description:
+        "Working as web development intern as react js and other front-end technologies",
+    },
+  ],
 
   education: [
     {

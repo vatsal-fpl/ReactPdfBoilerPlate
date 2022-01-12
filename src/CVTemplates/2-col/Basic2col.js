@@ -2,15 +2,18 @@ import React from "react";
 import { Page, View, Document, StyleSheet, Text } from "@react-pdf/renderer";
 
 // Template structure
-import { TemplateStructure } from "./TemplateStructure";
+import { TemplateStructure } from "./TemplateStructure2-col";
 // Components
 import Header from "./components/Header";
 import Objective from "./components/Objective";
+import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Education from "./components/Education";
 import Certificates from "./components/Certificates";
 import Skills from "./components/Skills";
 import Language from "./components/Language";
+import Social from "./components/Social";
+import Award from "./components/Award";
 
 let key = 0;
 // components
@@ -42,7 +45,7 @@ const GenerateRows = (props) => {
 const GenerateColumns = (props) => {
   const generateStyle = (column) => {
     return {
-      width: column.width,
+      flexBasis: column.flexBasis,
     };
   };
 
@@ -82,6 +85,9 @@ const GenerateSection = (props) => {
       case "project":
         return <Projects studentData={studentData} />;
 
+      case "work-experience":
+        return <Experience studentData={studentData} />;
+
       case "education":
         return <Education studentData={studentData} />;
 
@@ -92,6 +98,11 @@ const GenerateSection = (props) => {
         return <Skills studentData={studentData} />;
       case "language":
         return <Language studentData={studentData} />;
+
+      case "social":
+        return <Social studentData={studentData} />;
+      case "award":
+        return <Award studentData={studentData} />;
       default:
         return console.log("Hello");
     }
@@ -128,7 +139,7 @@ export default function Basic(props) {
           size="A4"
           style={styles.page}
           key={page.id}
-          style={{ minHeight: "100vh", minWidth: "100vw" }}
+          style={{ maxwidth: "100vw", maxHeight: "100vh" }}
         >
           <GenerateRows page={page} studentData={props.studentData} />
         </Page>
