@@ -1,21 +1,16 @@
 import './App.css';
 import React from 'react';
-import PDFfile from './components/PDFfile';
-import { PDFDownloadLink } from '@react-pdf/renderer';
-
-function App (){
-  return (
-    <div className="App">
-      <PDFDownloadLink document={<PDFfile />} fileName='exmp'>
-        {({loading}) =>  
-          loading ? (
-            <button>Loading Doc..</button> 
-          ) : ( 
-            <button>Download</button>
-          )
-          }
-      </PDFDownloadLink>
-    </div>
+import Basic from './CVtemplate/Basic/Basic';
+import { studentData } from './studentData';
+import { PDFViewer } from '@react-pdf/renderer';
+    
+function App() {
+return (
+    
+    <PDFViewer style={{minHeight:"100vh",minWidth:"100vw"}}>
+      <Basic studentData={studentData} />
+    </PDFViewer>
+    
   );
 }
 
