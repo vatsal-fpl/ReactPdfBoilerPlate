@@ -4,15 +4,14 @@ import { Page, View, Document, StyleSheet, Text } from "@react-pdf/renderer";
 // Template structure
 import { TemplateStructure } from "./TemplateStructure";
 // Components
-import Header from "./components/Header";
+import Profile from "./components/Profile";
 import Objective from "./components/Objective";
 import Projects from "./components/Projects";
 import Education from "./components/Education";
-import Certificates from "./components/Certificates";
+import Certifications from "./components/Certifications";
 import Skills from "./components/Skills";
-import Language from "./components/Language";
+import Languages from "./components/Languages";
 
-let key = 0;
 // components
 const GenerateRows = (props) => {
   const generateStyle = (row) => {
@@ -74,7 +73,7 @@ const GenerateSection = (props) => {
   const loadComponent = (sectionDetail, studentData) => {
     switch (sectionDetail.sectionName) {
       case "personal-details":
-        return <Header studentData={studentData} />;
+        return <Profile studentData={studentData} />;
 
       case "objective":
         return <Objective studentData={studentData} />;
@@ -86,12 +85,12 @@ const GenerateSection = (props) => {
         return <Education studentData={studentData} />;
 
       case "certification":
-        return <Certificates studentData={studentData} />;
+        return <Certifications studentData={studentData} />;
 
       case "skills":
         return <Skills studentData={studentData} />;
       case "language":
-        return <Language studentData={studentData} />;
+        return <Languages studentData={studentData} />;
       default:
         return console.log("Hello");
     }
@@ -110,7 +109,7 @@ export default function Basic(props) {
       backgroundColor: "#FFF",
       padding: "1cm",
       flexDirection: "column",
-      fontFamily: props.studentData.student.selectedFontFamily || "Roboto",
+      fontFamily: "Roboto",
     },
   });
 

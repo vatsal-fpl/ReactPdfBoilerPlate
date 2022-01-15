@@ -1,22 +1,22 @@
 import React from "react";
 import { View, Text } from "@react-pdf/renderer";
-import { Style, Styles } from "./Header";
+import { Style, Styles } from "./Profile";
 export default function Skills(props) {
   return (
     <View>
       <Text style={Styles.section}>Skills</Text>
-      {props.studentData.skills.map((s) => {
+      {props.studentData.skill.map((skill) => {
         return (
           <View
-            key={s.id}
+            key={skill.id}
             style={{
               flexDirection: "row",
               justifyContent: "space-between",
               fontSize: ".5cm",
             }}
           >
-            <Text style={Styles.skill.items}>{s.title}</Text>
-            <Text style={Styles.skill.items}>{s.competence}</Text>
+            <Text style={Styles.skill.items}>{skill.title}</Text>
+            <Text style={Styles.skill.items}>{skill.competence}</Text>
           </View>
         );
       })}

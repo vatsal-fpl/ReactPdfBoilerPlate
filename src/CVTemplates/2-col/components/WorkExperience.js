@@ -1,12 +1,12 @@
 import React from "react";
 import { Text, View } from "@react-pdf/renderer";
-import { Styles } from "./Header";
-
-export default function Experience(props) {
+import Heading from "./Heading";
+export default function WorkExperience(props) {
+  const { studentData } = props;
   return (
     <View>
-      <Text style={Styles.section}>Experience</Text>
-      {props.studentData.workExperience.map((ex) => {
+      <Heading title="WorkExperience" />
+      {studentData.workExperience.map((ex) => {
         return (
           <View key={ex.id} style={{ fontSize: ".4cm" }}>
             <View

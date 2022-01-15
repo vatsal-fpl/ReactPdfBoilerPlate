@@ -1,14 +1,25 @@
 import React from "react";
 import { View, Text } from "@react-pdf/renderer";
-import { Styles } from "./Header";
-export default function Certificates(props) {
+
+export default function Certifications(props) {
   return (
     <>
       <View style={{ fontSize: ".5cm", margin: "0" }}>
-        <Text style={Styles.section}>Certificates</Text>
+        <Text
+          style={{
+            color: "#0984e3",
+            padding: "5px",
+            borderBottom: "1px",
+            textTransform: "uppercase",
+            marginBottom: "5px",
+            backgroundColor: "#fdcb6e",
+          }}
+        >
+          Certificates
+        </Text>
         {props.studentData.certification.map((c) => {
           return (
-            <View key={c.id} style={{ fontSize: ".45cm" }}>
+            <View key={c.id} style={{ fontSize: ".5cm" }}>
               <Text style={{ marginBottom: ".2cm" }}>
                 {c.id} {c.title}
               </Text>

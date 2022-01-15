@@ -1,12 +1,11 @@
 import { Text } from "@react-pdf/renderer";
-import { Styles } from "./Header";
+import Heading from "./Heading";
 export default function objective(props) {
+  const { studentData } = props;
   return (
     <>
-      <Text style={Styles.section}>Objective</Text>
-      <Text style={{ fontSize: ".4cm" }}>
-        {props.studentData.student.objective}
-      </Text>
+      <Heading title="objective" />
+      <Text style={{ fontSize: ".4cm" }}>{studentData.student.objective}</Text>
     </>
   );
 }

@@ -42,7 +42,7 @@ export const Styles = StyleSheet.create({
   },
 });
 
-export default function header(props) {
+export default function Profile(props) {
   return (
     <>
       <View style={Styles.header}>

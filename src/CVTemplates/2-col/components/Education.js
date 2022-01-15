@@ -1,29 +1,29 @@
 import React from "react";
 import { View, Text } from "@react-pdf/renderer";
-import { Styles } from "./Header";
+import Heading from "./Heading";
 export default function Education(props) {
+  const { studentData } = props;
   return (
     <>
-      <Text style={Styles.section}>Education</Text>
-      {props.studentData.education.map((e) => {
+      {studentData.education.map((eduitem) => {
         return (
           <View
-            key={e.id}
+            key={eduitem.id}
             style={{ paddingBottom: "0.2cm", fontSize: ".45cm" }}
           >
             <View
               style={{ flexDirection: "row", justifyContent: "space-between" }}
             >
               <Text style={{ marginBottom: "5px" }}>
-                {e.id} {e.degree}
+                {eduitem.id} {eduitem.degree}
               </Text>
-              <Text>{e.finalScore}</Text>
+              <Text>{eduitem.finalScore}</Text>
             </View>
             <Text style={{ marginBottom: "5px" }}>
-              Institute: {e.instituteName ? e.instituteName : null}
+              Institute: {eduitem.instituteName ? eduitem.instituteName : null}
             </Text>
             <Text style={{ marginBottom: "5px" }}>
-              University: {e.university}
+              University: {eduitem.university}
             </Text>
           </View>
         );

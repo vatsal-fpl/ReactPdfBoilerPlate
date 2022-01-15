@@ -4,16 +4,16 @@ import { Page, View, Document, StyleSheet, Text } from "@react-pdf/renderer";
 // Template structure
 import { TemplateStructure } from "./TemplateStructure2-col";
 // Components
-import Header from "./components/Header";
+import Profile from "./components/Profile";
 import Objective from "./components/Objective";
-import Experience from "./components/Experience";
+import WorkExperience from "./components/WorkExperience";
 import Projects from "./components/Projects";
 import Education from "./components/Education";
-import Certificates from "./components/Certificates";
+import Certifications from "./components/Certifications";
 import Skills from "./components/Skills";
-import Language from "./components/Language";
+import Languages from "./components/Languages";
 import Social from "./components/Social";
-import Award from "./components/Award";
+import Awards from "./components/Awards";
 
 let key = 0;
 // components
@@ -22,6 +22,7 @@ const GenerateRows = (props) => {
     return {
       width: "100%",
       flexDirection: "row",
+      flexWrap: "wrap"
     };
   };
 
@@ -45,7 +46,7 @@ const GenerateRows = (props) => {
 const GenerateColumns = (props) => {
   const generateStyle = (column) => {
     return {
-      flexBasis: column.flexBasis,
+      width: column.width,
     };
   };
 
@@ -77,7 +78,7 @@ const GenerateSection = (props) => {
   const loadComponent = (sectionDetail, studentData) => {
     switch (sectionDetail.sectionName) {
       case "personal-details":
-        return <Header studentData={studentData} />;
+        return <Profile studentData={studentData} />;
 
       case "objective":
         return <Objective studentData={studentData} />;
@@ -86,23 +87,23 @@ const GenerateSection = (props) => {
         return <Projects studentData={studentData} />;
 
       case "work-experience":
-        return <Experience studentData={studentData} />;
+        return <WorkExperience studentData={studentData} />;
 
       case "education":
         return <Education studentData={studentData} />;
 
       case "certification":
-        return <Certificates studentData={studentData} />;
+        return <Certifications studentData={studentData} />;
 
-      case "skills":
+      case "skill":
         return <Skills studentData={studentData} />;
       case "language":
-        return <Language studentData={studentData} />;
+        return <Languages studentData={studentData} />;
 
       case "social":
         return <Social studentData={studentData} />;
       case "award":
-        return <Award studentData={studentData} />;
+        return <Awards studentData={studentData} />;
       default:
         return console.log("Hello");
     }

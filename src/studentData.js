@@ -142,7 +142,7 @@ export const studentData = {
         "Basic introduction of Data science and its need and future scope about its scope",
     },
   ],
-  skills: [
+  skill: [
     {
       id: "1",
       title: "HTML",
