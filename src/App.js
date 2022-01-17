@@ -1,11 +1,11 @@
 import { PDFViewer } from '@react-pdf/renderer';
-import Basic from './CVTemplates/Basic/Basic';
+import B2column from './CVTemplates/2-column/B2column';
 import {studentData} from './studentData';
 function App() {
   return (
     
     <PDFViewer style={{minHeight:"100vh", minWidth:"100vw"}}>
-      <Basic studentData={studentData} />
+      <B2column studentData={studentData} />
     </PDFViewer>
     
    

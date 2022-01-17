@@ -63,8 +63,7 @@ export const studentData = {
 
             currentlyWorking: "true",
         },
-        {
-            
+        { 
             id: "2",
             instituteName:
               "Shree Swaminarayan Higher Secondary School",
@@ -72,12 +71,29 @@ export const studentData = {
             university: "Gujarat Board",
             branch: "Science",
             modeOfAssessment: "offline",
-            finalScore: "First class",
+            finalScore: "84%",
+      
+            startMonth: "june",
+            startYear: "2016",
+            endMonth: "June",
+            endYear: "2018",
+      
+            currentlyWorking: "false",
+          },
+          { 
+            id: "3",
+            instituteName:
+              "Shree Swaminarayan Higher Secondary School",
+            degree: "S.S.C",
+            university: "Gujarat Board",
+            branch: "None",
+            modeOfAssessment: "offline",
+            finalScore: "91%",
       
             startMonth: "june",
             startYear: "2014",
             endMonth: "June",
-            endYear: "2017",
+            endYear: "2016",
       
             currentlyWorking: "false",
           },
@@ -100,8 +116,19 @@ export const studentData = {
     ],
 
     language: [
-        {
+        {   
+            id: "1",
             title: "English",
+            proficiency: "Medium", 
+        },
+        {
+            id: "2",
+            title: "Hindi",
+            proficiency: "Medium", 
+        },
+        {
+            id: "3",
+            title: "Gujarati",
             proficiency: "Medium", 
         },
     ],
