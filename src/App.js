@@ -1,8 +1,7 @@
-import './App.css';
 import React from 'react';
-import Basic from './CVtemplate/Basic/Basic';
 import { studentData } from './studentData';
 import { PDFViewer } from '@react-pdf/renderer';
+import Basic from './CVtemplate/2column/Basic';
     
 function App() {
 return (

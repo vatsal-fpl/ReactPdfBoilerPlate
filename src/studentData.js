@@ -7,7 +7,7 @@ export const studentData = {
         gender: 'female',
 
         email: 'parekhmoxa23@gmail.com',
-        contactNumber: '7069938365',
+        contactNumber: 'Contact no: 7069938365',
 
         city: 'Ahmedabad',
         state: 'Gujarat',
