@@ -1,18 +1,17 @@
-import { PDFViewer } from "@react-pdf/renderer";
-import { React} from "react";
+import { PDFViewer, Font } from "@react-pdf/renderer";
+import { React } from "react";
 import { useState } from "react";
 import TemplatePreview from "./CVTemplates/CVTempletPDFViewer";
 
 import { studentData } from "./studentData";
-//Font.register({ family: 'Be Vietnam Pro', src:'https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&display=swap'});
 import { templateSequence } from "./CVTemplates/CVTemplateData";
 
 function App() {
-  const [templateToShow,setTemplateToShow]=useState(0);
+  const [templateToShow, setTemplateToShow] = useState(0);
 
   const renderPDFPreview = () => {
     return (
-      <div style={{display: 'flex'}}>
+      <div style={{ display: "flex" }}>
         <div style={{ width: "15%" }}>
           <p style={{ textAlign: "center" }}>Choose Template</p>
           <ol>
@@ -29,7 +28,7 @@ function App() {
           </ol>
         </div>
         <div style={{ width: "85%" }}>
-          <PDFViewer style={{height: "85vh",width: "85vw"}}>
+          <PDFViewer style={{ height: "85vh", width: "85vw" }}>
             <TemplatePreview
               studentData={studentData}
               templateId={templateToShow}
@@ -40,10 +39,7 @@ function App() {
     );
   };
 
-  return (<>
-    {renderPDFPreview()}
-    </>
-    );
+  return <>{renderPDFPreview()}</>;
 }
 
 export default App;

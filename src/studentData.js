@@ -1,6 +1,7 @@
+import img from "./CVTemplates/ResumeTrial22/assets/img/Scanned photo.jpg";
 export const studentData = {
   student: {
-    // profilePicture: File,
+    profilePicture: img,
     firstName: "Vivek",
     lastName: "Modi",
     dateOfBirth: new Date("11-04-1997"),
@@ -34,7 +35,20 @@ export const studentData = {
       startYear: "2022",
       currentlyWorking: true,
       description:
-        "Working as web development intern as react js and other front-end technologies",
+        "Working as web development intern as react js and other front-end technologies like CSS,javascript",
+    },
+    {
+      id: "2",
+      companyName: "Manhatten group ",
+      location: "Ahmedabad",
+      position: "Web developer intern",
+      startMonth: "Aug",
+      startYear: "2018",
+      endMonth: "Dec",
+      endYear: "2019",
+      currentlyWorking: false,
+      description:
+        "Worked as web development intern and learnt  front-end technologies like HTML,CSS,javascript",
     },
   ],
 
@@ -42,7 +56,7 @@ export const studentData = {
     {
       id: "1",
       instituteName: "LD ARTS study center",
-      degree: "Maters of Computer Applications",
+      degree: "MCA",
       university: "IGNOU",
       branch: "CS",
       modeOfAssessment: "offline",
@@ -52,24 +66,25 @@ export const studentData = {
       startYear: "2017",
       endMonth: "September",
       endYear: "2021",
-
+      city: "Ahmedabad",
+      state: "Gujarat",
       currentlyWorking: true,
     },
     {
       id: "2",
-      instituteName:
-        "Shree Chimanbhai Patel Institute of Computer Applications",
+      instituteName: "Shree Chimanbhai Patel Institute",
       degree: "BCA",
       university: "Gujarat University",
       branch: "CS",
       modeOfAssessment: "offline",
-      finalScore: "First class",
+      finalScore: "First class CGPA(6)",
 
       startMonth: "june",
       startYear: "2014",
       endMonth: "June",
       endYear: "2017",
-
+      city: "Ahmedabad",
+      state: "Gujarat",
       currentlyWorking: false,
     },
   ],
@@ -80,7 +95,7 @@ export const studentData = {
       title: "Covid 19 Vaccination Analysis",
       link: "https://colab.research.google.com/drive/1EjV4pmrfSnlGcMvhXmKLFMG1oMjpIe6g?usp=sharing",
       description:
-        "Visulization of vaccinated people across the world with python matplotlib and prediction of vaccinated people using linear regression with python sklearn library",
+        "Visulization of vaccinated people across the world with python matplotlib and prediction of vaccinated people using linear regression with python sklearn library.Data preprocessing like data transformation like removing null values or replacing it with mean or median, data scaling between 0 and 1 using MinMaxScalar,pandas Dataframe and numpy libraries.",
 
       /*startMonth: String!
             startYear: String!
